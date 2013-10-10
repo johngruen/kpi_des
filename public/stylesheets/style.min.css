@@ -52,3 +52,15 @@ fieldset{border:0;margin:0;padding:0}
 textarea{resize:vertical}
 .chromeframe{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}
 body{font:75% "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;color:#444}
+#main_header{width:100%;background:#fff}
+#main_header header{*zoom:1}#main_header header:before,#main_header header:after{content:" ";display:table}
+#main_header header:after{clear:both}
+#main_header header h1{vertical-align:bottom;font-size:20px;margin:6px 0 0 40px}
+#main_nav{width:100%;background:#222;height:40px}
+#main_content{width:100%;background:#fff}
+#main_footer{width:100%;background:#222;color:#fff;padding:40px 0}
+.wrapper{width:960px;margin:0 auto}
+#palette{z-index:999;opacity:.9;*zoom:1}#palette:before,#palette:after{content:" ";display:table}
+#palette:after{clear:both}
+#controls{width:200px;height:550px;float:left;background:#ccc}
+#palette_toggle{width:15px;height:550px;float:left;background:#999}

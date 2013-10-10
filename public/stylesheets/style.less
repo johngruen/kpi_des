@@ -9,9 +9,13 @@
 //colors
 @fontColor: #444;
 @highlight: #ea48ef;
+@lowlight: #222;
 @background: #fff;
 @font: "Open Sans","Helvetica Neue",Helvetica, Arial, sans-serif;
+
+//Height and Size
 @scale: 75%;
+@graphHeight: 550px;
 
 //breakpoints
 @tinyBreak: 320px;
@@ -22,14 +26,78 @@
 
 /*==MIXINS==========================================================*/
 
+.full(@bg) {
+	width:100%;
+	background:@bg;
+}
 
-/*==COMPOTENTS==========================================================*/
+/*==COMPONTENTS==========================================================*/
 
 body {
 	font: @scale @font;
 	color: @fontColor;
 }
 
+//HEADER
+
+#main_header {
+	.full(@background);
+
+	
+}
+
+#main_header header {
+	.clearfix();
+}
+
+#main_header header h1 {
+	vertical-align: bottom;
+	font-size:20px;
+	margin: 6px 0 0 40px;
+}
+
+#main_nav {
+	.full(@lowlight);
+	height:40px;
+}
+
+#main_content {
+	.full(@background);
+}
+
+#main_footer {
+	.full(@lowlight);
+	color: @background;
+	padding:40px 0;
+}
+
+.wrapper {
+	width:960px;
+	margin:0 auto;
+}
+
+/*==PALETTE/GRAPH==========================================================*/
+
+#palette {
+	//position: absolute;
+	z-index: 999;
+	opacity: .9;
+	.clearfix();
+}
+
+#controls {
+	width:200px;
+	height:@graphHeight;
+	float:left;
+	background: #ccc
+}
+
+#palette_toggle {
+	width:15px;
+	height:@graphHeight;
+	float:left;
+	background:#999;
+}
 
 /*==SIZINGS==========================================================*/
 /*
