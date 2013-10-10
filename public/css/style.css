@@ -360,18 +360,29 @@ body {
 }
 #main_nav {
   width: 100%;
-  background: #222222;
-  height: 40px;
+  background: #223333;
+  height: 32px;
+  -webkit-box-shadow: 0px 5px 10px #cccccc;
+  -moz-box-shadow: 0px 5px 10px #cccccc;
+  box-shadow: 0px 5px 10px #cccccc;
+  position: relative;
+  z-index: 999;
 }
 #main_content {
   width: 100%;
   background: #ffffff;
+  min-height: 550px;
 }
 #main_footer {
   width: 100%;
-  background: #222222;
+  background: #223333;
   color: #ffffff;
   padding: 40px 0;
+  -webkit-box-shadow: 0px 0px 10px #cccccc;
+  -moz-box-shadow: 0px 0px 10px #cccccc;
+  box-shadow: 0px 0px 10px #cccccc;
+  position: relative;
+  z-index: 999;
 }
 .wrapper {
   width: 960px;
@@ -379,8 +390,9 @@ body {
 }
 /*==PALETTE/GRAPH==========================================================*/
 #palette {
-  z-index: 999;
+  z-index: 000;
   opacity: .9;
+  position: absolute;
   *zoom: 1;
 }
 #palette:before,
@@ -395,13 +407,16 @@ body {
   width: 200px;
   height: 550px;
   float: left;
-  background: #cccccc;
+  background: #eaeaea;
 }
 #palette_toggle {
-  width: 15px;
+  width: 25px;
   height: 550px;
   float: left;
-  background: #999;
+  background: #e1e1e1;
+  border-left: 2px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  cursor: pointer;
 }
 /*==SIZINGS==========================================================*/
 /*
