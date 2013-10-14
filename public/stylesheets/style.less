@@ -1,3 +1,4 @@
+@import "fontAwesome/font-awesome.less";
 @import "3L.less";
 
 .normalize();
@@ -31,6 +32,25 @@
 	background:@bg;
 }
 
+.verticalCenterChild() {
+	/* Internet Explorer 10 */
+	display:-ms-flexbox;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	/* Safari, Opera, and Chrome */
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	/* W3C */
+	display:box;
+	box-pack:center;
+	box-align:center;
+}
+
 /*==COMPONTENTS==========================================================*/
 
 body {
@@ -38,10 +58,27 @@ body {
 	color: @fontColor;
 }
 
+
 .wrapper {
 	width:1024px;
 	margin:0 auto;
-	.clearfix()
+	clear:both;
+}
+
+.center {
+	text-align:center;
+}
+
+h2 {
+	font-size:24px;
+	margin:20px 0;
+	font-weight: 300;
+}
+
+h3 {
+	font-size:24px;
+	margin:18px 0;
+	font-weight: 300;
 }
 
 //HEADER
@@ -49,7 +86,6 @@ body {
 #main_header {
 	.full(@background);
 
-	
 }
 
 #main_header header {
@@ -70,9 +106,9 @@ body {
 	z-index: 999;
 }
 
-#main_content {
+.main_content {
 	.full(@background);
-	min-height:@graphHeight;
+	.clearfix();
 }
 
 #main_footer {
@@ -88,23 +124,24 @@ body {
 	font-size:16px;
 	float:right;
 	font-weight: 300;
+	margin:0;
 }
 
 /*==PALETTE/GRAPH==========================================================*/
 
 #graph_region {
 	height:@graphHeight;
-	margin: 30px 0;
+	margin: 30px 0 0 0;
 	border-top:4px solid #d9d9d9;
 	border-bottom:4px solid #d9d9d9;
+	background:url(../images/fake_graph.png)  center bottom;
+	background-size: cover;
+	.clearfix();
 }
 #palette {
 	//position: absolute;
 	z-index: 000;
-	opacity: .9;
 	position: absolute;
-
-
 	.clearfix();
 }
 
@@ -112,24 +149,47 @@ body {
 	width:200px;
 	height:@graphHeight;
 	float:left;
-	background: #eaeaea;
+	background: url(../images/palette_back.png) repeat-y;
+	.box-sizing(border-box);
+	padding:0 20px;
 }
 
 #palette_toggle {
-	width:25px;
+	width:28px;
 	height:@graphHeight;
 	float:left;
-	background:#e1e1e1;
+	background-image:url(../images/palette_toggle.png);
+	background-position: 0 0;
 	border-left:2px solid #d9d9d9;
-	border-right:1px solid #d9d9d9;
-	cursor: pointer
+	cursor: pointer;
+	.verticalCenterChild();
+} 
+
+#palette_toggle:hover {
+	background-image:url(../images/palette_toggle.png);
+	background-position: 28px 0;
 }
 
+#palette_control {
+	display: block;
+	text-align: center;
+}
+
+/*==DATE PICKER==========================================================*/
+#date_container {
+	.full(#eaeaea);
+	width:96%;
+	padding:5px 2%;
+	clear:both;
+}
+
+#date_slider {
+	margin:10px auto;
+}
 /*==GRIDS==========================================================*/
 
 .three1, .three2, .three3 {
 	height:200px;
-	background: #eee;
 	width:32%;
 	margin: 0 0 50px 0;
 	float:left;
