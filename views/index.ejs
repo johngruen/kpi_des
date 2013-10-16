@@ -1,41 +1,71 @@
 <%= include header.ejs %>
 
 <div id="main_header">
-	<header class="wrapper">
+<div class="wrapper grid">
+	<header class="two1">
 		<img src="images/temp_logo.png" height="40" width="auto" style="float:left">
 		<h1><%= title %></h1>
 	</header>
+	<div class="two2">
+		<p class="persona_sign_in"><img src="images/persona_logo_med.png" height="18" width="auto">Sign up / Sign up</p>
+	</div>
 </div>
+</div>
+
 <div id="main_nav">
-	<nav>
+	<nav class="wrapper">
+		<ul>
+			<li><a href="#" class="active">New Users</a><li>
+			<li><a href="#">Active RPs</a><li>
+			<li><a href="#">Password Reset Flows</a><li>
+		</ul>
 	</nav>
 </div>
 
 <div class="main_content">
 	
-	<div id="stats" class="wrapper"></div>
+	<div id="stats" class="wrapper">
+		<header><h3>Top Teir Callouts</h3></header>
+			<div id="news_feed">
+				<p class="icon-thumbs-up">We Just Did This Cool Thing!</p>
+				<p class="icon-thumbs-up">2 Million Unique Sign ins Per Day!</p>
+			</div>
+		<div id="big_numbers">
+			<div><span class="big_number pos">+24%</span><span class="bn_def">critical stat</span></div>
+			<div><span class="big_number pos">+24%</span><span class="bn_def">success rate since last train</span></div>
+			<div><span class="big_number pos">+24%</span><span class="bn_def">important stat</span></div>
+			<div><span class="big_number neg">-100</span><span class="bn_def">lorem ipsum</span></div>
+		</div>
+	</div>
 
 	<div id="graph_region">
+		<div id="graph_header" class="wrapper">
+		<header>
+			<h3>Detailed Graph</h3>
+			<h5>One Sentence Subtitle</h5>
+		</header>
+		</div>
 		<div id="palette" class="showing">
 			<div id="controls">
-				<h3>Lorem</h3>
 				<!--not at all formatted-->
+					<h3>Select View Context</h3>
 					<select>
+					  <option value="#">Option One</option>
 					  <option value="#">lorem</option>
 					  <option value="#">lorem</option>
 					  <option value="#">lorem</option>
 					  <option value="#">lorem</option>
 					  <option value="#">lorem</option>
-					  <option value="#">lorem</option>
-					</select> 
-					<br><br>
-					<input type="checkbox"></input> Lorem Ipsum<br>
-					<input type="checkbox"></input> Lorem<br>
-					<input type="checkbox"></input> Lorem Ipsum<br>
-					<input type="checkbox"></input> Lorem<br>
-					<input type="checkbox"></input> Lorem Ipsum<br>
-					<input type="checkbox"></input> Lorem Ipsum<br>
-					<br><br>
+					</select>
+					<h3>Granular Display</h3>
+					<div class="checkboxes">
+						<input type="checkbox"></input> Lorem Ipsum<br>
+						<input type="checkbox"></input> Lorem<br>
+						<input type="checkbox"></input> Lorem Ipsum<br>
+						<input type="checkbox"></input> Lorem<br>
+						<input type="checkbox"></input> Lorem Ipsum<br>
+						<input type="checkbox"></input> Lorem Ipsum<br>
+					</div>				
 					<input type="submit"></input>
 				</form>
 			</div>
@@ -43,19 +73,28 @@
 				<div id="palette_control" class="icon-chevron-left icon-large"></div>
 			</div>
 		</div>
+		<div id="graph"></div>
 	</div>
 
 	<div id="date_container">
 		<p class="">Date Range</p>
 		<div id="date_slider"></div>
-		<div id="date_picker1"></div>
+		<div id="date_picker">
+			<div id="date_picker1">
+				From: <input type="text"></input>
+			</div>
+			<div id="date_picker2">
+					To: <input type="text"></input>
+			</div>
+		</div>
+
 	</div>
 </div>
 
 <div class="main_content">
-	<div class="wrapper">
-		<div class="three1">
-			<h3>Lorem</h3>
+	<div class="wrapper grid">
+		<div class="two1">
+			<h3>Detailed Notes</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -63,8 +102,8 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-		<div class="three2">
-			<h3>Lorem</h3>
+		<div class="two2">
+			<h3>Links/Comments</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -72,15 +111,7 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-		<div class="three3">
-			<h3>Lorem</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
+
 	</div>
 </div>
 
