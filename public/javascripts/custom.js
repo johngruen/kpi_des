@@ -1,29 +1,29 @@
-$(function(){
+$(function() {
 
-	var p = $("#palette");
+	var p = $('#palette');
 
-	$("#palette_toggle").on( 'click', function() {
+	$('#palette_toggle').on( 'click', function() {
 
 		if ( p.hasClass('showing')) {
 
 			p
 				.animate({left:-200},100)
 				.removeClass('showing')
-				.find("#palette_control")
-				.removeClass("icon-chevron-left")
+				.find('#palette_control')
+				.removeClass('icon-chevron-left')
 				.addClass('icon-chevron-right');
 		} else {
 			p
 				.animate({left:-0},100)
 				.addClass('showing')
-				.find("#palette_control")
-				.removeClass("icon-chevron-right")
+				.find('#palette_control')
+				.removeClass('icon-chevron-right')
 				.addClass('icon-chevron-left');
 		}
 		
 	});
 
-	$("#date_slider").slider({ values: [ 5, 95 ], range: true });
+	$('#date_slider').slider({ values: [ 5, 95 ], range: true });
 
 	$('select').each( function() {
 
